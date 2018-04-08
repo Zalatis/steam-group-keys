@@ -1,29 +1,29 @@
 {extends "site.tpl"}
 {block content}
-<h2>Admin - claimed keys</h2>
+<h2>Clés réclamées</h2>
 
 {if isset($messageFlushed)}
-<p>Claimed keys were successfully flushed and backup file was created.</p>
+<p>Les clés réclamées ont été vidées et un fichier de sauvegarde a été créé.</p>
 {/if}
 
-<p><a href="./?page=admin&action=claimedkeysflush">Delete all claimed keys</a></p>
+<p><a href="./?page=admin&action=claimedkeysflush">Supprimer toutes les clés réclamées</a></p>
 
 {if isset($keys)}
 <table>
 	<tr>
-		<th>Key</th>
-		<th>User</th>
-		<th>Actions</th>
+		<th>Clé</th>
+		<th style="padding-left:10px;">Utilisateur</th>
+		<th style="padding-left:20px;">Actions</th>
 	</tr>
 	{foreach $keys as $key}
 	<tr>
 		<td>{$key[0]}</td>
-		<td><a href="{$key[1]['profileurl']}"><img src="{$key[1]['avatar']}">{$key[1]['personaname']}</a></td>
-		<td><a href="./?page=admin&action=claimedkeydelete&key={$key[0]}">delete</a></td>
+		<td style="padding-left:10px;"><a href="{$key[1]['profileurl']}"><img src="{$key[1]['avatar']}">{$key[1]['personaname']}</a></td>
+		<td style="padding-left:20px;"><a href="./?page=admin&action=claimedkeydelete&key={$key[0]}">Supprimer</a></td>
 	</tr>
 	{/foreach}
 </table>
 {else}
-<p>No claimed keys found.</p>
+<p>Aucune clé utilisée trouvée.</p>
 {/if}
 {/block}
