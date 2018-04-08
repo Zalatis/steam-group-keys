@@ -86,6 +86,7 @@ else
 	}
 	catch(ErrorException $e)
 	{
-		print 'Error. Contact group admins, please.';
+		print 'Erreur. Contactez un administrateur.';
 	}
 }
+?>
