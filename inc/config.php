@@ -1,11 +1,11 @@
 <?php
-$api_key = '4CF9F15D9EB3261B0F727AD14196EE66'; // visit http://steamcommunity.com/dev to obtain your Steam Web API key
+$api_key = 'API_KEY'; // visit http://steamcommunity.com/dev to obtain your Steam Web API key
 $group_url = 'https://steamcommunity.com/gid/103582791462054730'; // http://steamcommunity.com/groups/GroupName or http://steamcommunity.com/gid/GroupID
 
 $bundle_keys = 'inc/keys.json';
 $claimed_keys_file = 'inc/claimed_keys.json';
 $memberlist_file = 'inc/memberlist.json';
-$memberlist_update_time = 60; // in seconds
+$memberlist_update_time = 5; // in seconds
 $admins_file = "inc/admins.json";
 
 // don't forget to change error reporting to off on your production server
